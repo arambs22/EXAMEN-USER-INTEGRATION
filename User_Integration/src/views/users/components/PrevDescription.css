@@ -1,0 +1,33 @@
+.pres{
+    background-color: rgb(239, 239, 239);
+    position: relative;
+    display: flex; 
+    flex-direction: column; 
+    border: 2px solid transparent;
+    padding-left: 15px; 
+    padding-right: 15px; 
+    border-radius: 5px; 
+    width: 200px; 
+    height: 200px;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    cursor: pointer;
+    flex-shrink: 0;
+    text-align: justify;
+}
+
+.pres::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(transparent, rgb(239, 239, 239));
+}
+
+.pres:hover{
+    border: 2px solid #399c7e83;
+}

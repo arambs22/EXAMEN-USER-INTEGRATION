@@ -29,7 +29,7 @@ const Dashboard = () => {
     fetchUsers();
   }, []);
   return (
-    <NavigationBar title={<p>Usuarios Registrados</p>}>
+    <NavigationBar>
       <div style={{ display: 'flex', justifyContent: 'center'}}>
         <input
           style={{

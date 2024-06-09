@@ -10,8 +10,8 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-  }
+}
   
-  .card:hover {
-    border: 2px solid #399c7e83;
-  }
+.card:hover {
+  border: 2px solid #399c7e83;
+}

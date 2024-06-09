@@ -25,10 +25,6 @@ const NavigationBar = ({children, title}) => {
                         <p className="transition">Registro</p>
                     </div>
                 </div>
-    
-                <div style={{display: "flex", alignItems: "center", marginRight: "auto", height: '35px', paddingbottom: '20px', fontSize : "30px", paddingRight: "230px"}}>
-                    <strong>{title}</strong>
-                </div>
             </div>
     
             {children}
