@@ -106,64 +106,80 @@ const Users = () => {
       <div style={{padding: "10px", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <PrevDescription descriptions={descriptions}/>
       </div>
-      <div style={{ display: 'flex' }}>
-        <div>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{paddingRight: "50px"}}>
           <CardInfo user={user} />
         </div>
         <div>
-          <p>Descripción</p>
-          <textarea
-            label="Descripcion"
-            value={form.description}
-            name="description"
-            onChange={handleInputChange}
-          />
-          <p>Prescripción</p>
-          <textarea
-            label="Prescription"
-            value={form.prescription}
-            name="prescription"
-            onChange={handleInputChange}
-          />
-          <div>
-            <button
-              style={{
-                height: '50px',
-                width: '180px',
-                backgroundColor: '#399C7E',
-                border: 'none',
-                color: 'white',
-                cursor: 'pointer',
-                fontSize: '10px',
-                fontWeight: 'bold',
-                textAlign: 'center',
-                borderRadius: '5px',
-              }}
-              disabled={isLoading}
-              onClick={handleGenerateHelp}
-            >
-              <p>{isLoading ? 'Cargando' : 'Generar Prescripción'}</p>
-            </button>
-          </div>
-          <div>
-            <button
-              style={{
-                height: '50px',
-                width: '180px',
-                backgroundColor: '#399C7E',
-                border: 'none',
-                color: 'white',
-                cursor: 'pointer',
-                fontSize: '10px',
-                fontWeight: 'bold',
-                textAlign: 'center',
-                borderRadius: '5px',
-              }}
-              disabled={isLoading}
-              onClick={handlePostDescription}
-            >
-              <p>{isLoading ? 'Cargando' : 'Guardar Respuesta'}</p>
-            </button>
+
+          <div style={{display: 'flex', flexDirection: 'row', gap: "15px"}}>
+
+            <div style={{display: 'flex', flexDirection: 'column'}}>
+              <p>Descripción</p>
+              <textarea
+                label="Descripcion"
+                value={form.description}
+                name="description"
+                onChange={handleInputChange}
+              />
+            </div>
+
+            <div style={{display: 'flex', flexDirection: 'column'}}>
+              <p>Prescripción</p>
+              <textarea
+                label="Prescription"
+                value={form.prescription}
+                name="prescription"
+                onChange={handleInputChange}
+              />
+            </div>
+
+            <div style={{display: 'flex', flexDirection: 'column', gap: "15px"}}>
+
+              <div>
+                <button
+                  style={{
+                    height: '50px',
+                    width: '180px',
+                    backgroundColor: '#399C7E',
+                    border: 'none',
+                    color: 'white',
+                    cursor: 'pointer',
+                    fontSize: '10px',
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                    borderRadius: '5px',
+                  }}
+                  disabled={isLoading}
+                  onClick={handleGenerateHelp}
+                >
+                  <p>{isLoading ? 'Cargando' : 'Generar Prescripción'}</p>
+                </button>
+              </div>
+
+              <div>
+                <button
+                  style={{
+                    height: '50px',
+                    width: '180px',
+                    backgroundColor: '#399C7E',
+                    border: 'none',
+                    color: 'white',
+                    cursor: 'pointer',
+                    fontSize: '10px',
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                    borderRadius: '5px',
+                  }}
+                  disabled={isLoading}
+                  onClick={handlePostDescription}
+                >
+                  <p>{isLoading ? 'Cargando' : 'Guardar Respuesta'}</p>
+                </button>
+              </div>
+
+            </div>
+
           </div>
         </div>
       </div>
